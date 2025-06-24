@@ -1,6 +1,6 @@
 <?php
 /**
- * Script: b2-bucket-size-native.php
+ * Script: b2-b2-bucket-size.php
  * Author: Kevin Lott
  * Description:
  *     Scans a Backblaze B2 bucket using the B2 Native API to list folders and report total file count and size.
@@ -41,7 +41,7 @@ preg_match('/--output=(\w+)/', $flags, $matches);
 $output = $matches[1] ?? 'text';
 
 if (!$bucketName) {
-    echo "Usage: php b2-bucket-size-native.php <bucket> [prefix/] [--verbose] [--output=text|json|csv] [--versions=true|false]\n";
+    echo "Usage: php b2-b2-bucket-size.php <bucket> [prefix/] [--verbose] [--output=text|json|csv] [--versions=true|false]\n";
     exit(1);
 }
 
